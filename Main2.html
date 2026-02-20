@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+ 
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+ 
+</head>
+
+<body
+  <header class="site-header">
+    <div class="brand">
+      <div class="title">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextGen Notes Hub</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* futuristic header */
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #00ffe7;
+      text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #fff;
+      opacity: 0.8;
+      margin-top: 10px;
+    }
+
+    /* floating shapes */
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.15;
+      animation: float 8s infinite ease-in-out alternate;
+      z-index: 0;
+    }
+
+    .shape.one { width: 150px; height: 150px; background: #00ffe7; top: 20px; left: -50px; }
+    .shape.two { width: 120px; height: 120px; background: #ff00d4; bottom: 50px; right: -60px; animation-duration: 10s; }
+    .shape.three { width: 200px; height: 200px; background: #ffde00; top: 200px; right: -100px; animation-duration: 12s; }
+
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-20px) translateX(20px); }
+      100% { transform: translateY(0) translateX(0); }
+    }
+
+    /* main content */
+    main {
+      position: relative;
+      z-index: 1;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .semesters {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .row {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .semester-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(12px);
+      border-radius: 25px;
+      width: 220px;
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .semester-card:hover {
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 0 40px #00ffe7, 0 0 80px #ff00d4, 0 0 120px #ffde00;
+    }
+
+    .semester-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(45deg, #00ffe7, #ff00d4, #ffde00);
+      opacity: 0;
+      transition: opacity 0.4s;
+      z-index: 0;
+    }
+
+    .semester-card:hover::before {
+      opacity: 0.2;
+    }
+
+    .semester-card * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .semester-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      color: #00ffe7;
+    }
+
+    .semester-card p {
+      font-size: 0.9rem;
+      color: #fff;
+      opacity: 0.8;
+    }
+
+    /* footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+      color: #fff;
+      background: rgba(0,0,0,0.3);
+    }
+
+    footer span {
+      color: #ff00d4;
+      font-weight: 700;
+    }
+
+    /* responsive */
+    @media(max-width: 900px){
+      .row {
+        flex-wrap: wrap;
+      }
+      .semester-card {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    @media(max-width: 600px){
+      header h1 { font-size: 2rem; }
+      .semester-card { width: 160px; height: 160px; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="shape one"></div>
+    <div class="shape two"></div>
+    <div class="shape three"></div>
+    <h1>Tech Notes Hub</h1>
+    <p>Innovative portal for all your college study material</p>
+  </header>
+<main>
+    <div class="semesters">
+      <div class="row">
+        <a href="semm1.html" class="semester-card">
+          <h3>Semester 1</h3>
+        
+        </a>
+
+        <a href="semm2.html" class="semester-card">
+          <h3>Semester 2</h3>
+      
+        </a>
+
+        <a href="semm3.html" class="semester-card">
+          <h3>Semester 3</h3>
+        
+        </a>
+      </div>
+
+      <div class="row">
+        <a href="semm4.html" class="semester-card">
+          <h3>Semester 4</h3>
+       
+        </a>
+
+        <a href="semm5.html" class="semester-card">
+          <h3>Semester 5</h3>
+        
+        </a>
+
+        <a href="semm6.html" class="semester-card">
+          <h3>Semester 6</h3>
+       
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 <span> Tech Notes Hub</span>. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
