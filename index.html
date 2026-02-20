@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCA E-Resources</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background: linear-gradient(120deg,#020617,#0b3c5d,#1e1b4b,#020617);
+  background-size:300% 300%;
+  animation:bgMove 15s ease infinite;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+
+.bg-glow{
+  position:fixed;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  filter:blur(120px);
+  opacity:.45;
+  z-index:-1;
+}
+
+.glow1{
+  background:#38bdf8;
+  top:-100px;
+  left:-100px;
+}
+
+.glow2{
+  background:#a78bfa;
+  bottom:-120px;
+  right:-120px;
+}
+
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 40px;
+  background:rgba(2,6,23,.7);
+  backdrop-filter:blur(12px);
+  z-index:100;
+}
+
+
+.site-title{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+
+.site-title .main-title{
+  font-weight:600;
+  font-size:1.35rem;
+  color:#38bdf8;
+}
+
+.site-title .sub-title{
+  font-size:0.75rem;
+  font-weight:400;
+  color:#cbd5f5;
+  margin-top:4px;
+}
+
+header span{
+  font-size:.85rem;
+  color:#cbd5f5;
+}
+
+
+.main{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  padding-top:70px;
+}
+
+
+.left{
+  position:relative;
+  padding:90px 80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.left::before{
+  content:'';
+  position:absolute;
+  width:3px;
+  height:60%;
+  background:linear-gradient(#38bdf8,#a78bfa);
+  left:55px;
+  top:20%;
+  border-radius:10px;
+}
+
+.left h1{
+  font-size:3.4rem;
+  line-height:1.2;
+  margin-bottom:20px;
+}
+
+.left h1 span{
+  background:linear-gradient(90deg,#38bdf8,#a78bfa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.left p{
+  max-width:520px;
+  font-size:1.05rem;
+  color:#e5e7eb;
+  margin-bottom:40px;
+}
+
+
+.btn{
+  width:fit-content;
+  padding:14px 34px;
+  background:linear-gradient(135deg,#38bdf8,#a78bfa);
+  color:#020617;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:14px;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-4px) scale(1.05);
+  box-shadow:0 15px 40px rgba(56,189,248,.5);
+}
+
+
+.right{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
+  padding:90px 60px;
+}
+
+.box{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;
+  padding:32px;
+  backdrop-filter:blur(10px);
+  transition:.35s;
+}
+
+.box:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+
+.box h3{
+  color:#38bdf8;
+  margin-bottom:10px;
+}
+
+.box p{
+  font-size:.9rem;
+  color:#e5e7eb;
+}
+
+
+.developer{
+  text-align:center;
+  margin:30px 0 10px;
+  font-size:0.95rem;
+  color:#cbd5f5;
+}
+
+.developer span{
+  background:linear-gradient(90deg,#38bdf8,#a78bfa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:600;
+}
+
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(2,6,23,.8);
+  font-size:.8rem;
+  color:#94a3b8;
+}
+
+
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+
+@media(max-width:900px){
+  .main{grid-template-columns:1fr;}
+  .left::before{display:none;}
+  .right{grid-template-columns:1fr;padding:40px;}
+  .left{padding:60px 40px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-glow glow1"></div>
+<div class="bg-glow glow2"></div>
+
+<header>
+  <div class="site-title">
+    <span class="main-title">BCA E-Resources</span>
+    <span class="sub-title">Rev NEP Syllabus</span>
+  </div>
+</header>
+
+<div class="main">
+  <div class="left">
+    <h1>Learn.<br>Access.<br><span>Succeed.</span></h1>
+    <p>
+      A centralized digital platform crafted to help BCA students
+      access semester-wise academic resources with ease.
+    </p>
+    <a href="Main2.html" class="btn">Enter Library</a>
+  </div>
+
+  <div class="right">
+    <div class="box">
+      <h3>📚 Organized Notes</h3>
+      <p>All subjects arranged semester-wise for easy access.</p>
+    </div>
+
+    <div class="box">
+      <h3>⚡ Fast Access</h3>
+      <p>Optimized layout for smooth navigation.</p>
+    </div>
+
+    <div class="box">
+      <h3>📱 Responsive</h3>
+      <p>Works perfectly on all screen sizes.</p>
+    </div>
+
+    <div class="box">
+      <h3>🔒 Secure Access</h3>
+      <p>Reliable and safe digital storage for academic resources.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Developed  by  Sneha  Hallur 
+</footer>
+
+</body>
+</html>
